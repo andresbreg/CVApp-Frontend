@@ -48,7 +48,7 @@ a {
 }
 
 .login-button {
-  width: 100px;
+  width: 96px;
   height: 32px;
   margin: auto 24px;
   background-color: olivedrab;
@@ -112,6 +112,7 @@ a {
     margin: auto 6px;
   }
   .login-button {
+    width: 80px;
     margin: auto 12px auto 6px;
     font-size: 12px;
   }
@@ -130,7 +131,7 @@ a {
   }
   .login-button {
     height: 24px;
-    width: 80px;
+    width: 72px;
     margin: auto 12px auto 4px;
   }
 }
