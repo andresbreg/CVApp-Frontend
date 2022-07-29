@@ -1,0 +1,153 @@
+.top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  font-size: x-large;
+  font-weight: 600;
+  color: white;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.icons-button-container {
+  display: flex;
+  align-items: center;
+}
+
+.primary-logo {
+  width: 160px;
+  margin: auto 12px;
+}
+
+a {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  height: 24px;
+  margin: auto 12px;
+}
+
+.icon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.login-button {
+  width: 100px;
+  height: 32px;
+  margin: auto 24px;
+  background-color: olivedrab;
+  border: none;
+  border-radius: 25px;
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: rgb(119, 163, 30);
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 640px) {
+  .top-bar {
+    Height: 72px;
+    font-size: large;
+  }
+  .primary-logo {
+    width: 140px;
+  }
+  .icon {
+    margin: auto 10px;
+  }
+  .login-button {
+    margin: auto 20px auto 16px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .top-bar {
+    font-size: medium;
+  }
+  .primary-logo {
+    margin: auto 6px auto 8px;
+  }
+  .icon {
+    margin: auto 8px;
+  }
+  .login-button {
+    height: 28px;
+    width: 84px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .top-bar {
+    height: 64px;
+  }
+  .primary-logo {
+    width: 120px;
+    margin: auto 4px;
+  }
+  .icon {
+    height: 20px;
+    margin: auto 6px;
+  }
+  .login-button {
+    margin: auto 12px auto 6px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .top-bar {
+    font-size: 14px;
+  }
+  .primary-logo {
+    width: 112px;
+    margin: auto 4px;
+  }
+  .icon {
+    height: 16px;
+  }
+  .login-button {
+    height: 24px;
+    width: 80px;
+    margin: auto 12px auto 4px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .top-bar {
+    font-size: 12px;
+  }
+  .primary-logo {
+    width: 108px;
+    margin: auto 2px;
+  }
+  .icon {
+    margin: auto 5px;
+  }
+  .login-button {
+    width: 64px;
+    margin: auto 8px auto 5px;
+  }
+}
