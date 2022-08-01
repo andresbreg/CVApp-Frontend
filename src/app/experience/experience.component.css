@@ -1,0 +1,107 @@
+.section-title {
+  background-color: #1976d2;
+}
+
+h2 {
+  margin: 0;
+  padding: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+}
+
+.experience-cards-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding-top: 8px;
+  padding-left: 8px;
+}
+
+.experience-card {
+  margin-right: 8px;
+  margin-bottom: 8px;
+  text-align: center;
+  border-bottom: 4px solid #1976d2;
+  background-color: antiquewhite;
+}
+
+.experience-header {
+  margin: 12px auto;
+  height: 52px;
+  display: grid;
+  grid-template-columns: 16% 68% 16%;
+}
+
+.experience-logo {
+  justify-self: center;
+  align-self: center;
+}
+
+.edit-icons {
+  width: 44px;
+  display: flex;
+  justify-content: space-between;
+  justify-self: end;
+  align-self: flex-start;
+  margin-right: 12px;
+  /* display: none; */
+}
+
+h4 {
+margin: 0;
+}
+
+abbr {
+  display: flex;
+  align-items: center;
+}
+
+abbr img {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+abbr img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+#edit-button {
+  background-color: orange;
+}
+
+#delete-button {
+  background-color: red;
+}
+
+p {
+  margin-top: 0;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+  .experience-cards-container {
+    grid-template-columns: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .experience-logo {
+    transform: scale(0.84);
+  }
+  .edit-icons {
+    width: 40px;
+    margin-top: -4px;
+    margin-right: 8px;
+  }
+  abbr img {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    padding: 4px;
+  }
+}
