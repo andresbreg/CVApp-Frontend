@@ -1,0 +1,134 @@
+.section-title {
+  background-color: #1976d2;
+}
+
+h2 {
+  margin: 0;
+  padding: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+}
+
+.skills-container {
+  padding: 36px 12px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  row-gap: 36px;
+  justify-items: center;
+}
+
+abbr {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 4px;
+}
+
+abbr img {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  padding: 4px;
+  margin-right: -16px;
+}
+
+abbr img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+#delete-button {
+  background-color: red;
+}
+
+figure {
+  margin: 0;
+}
+
+figure img {
+  width: 100%;
+  object-fit: contain;
+  max-height: 72px;
+  max-width: 144px;
+}
+
+figcaption {
+  width: auto;
+  text-align: center;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.progress-level {
+  display: grid;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+progress {
+  width: 100px;
+}
+
+figure p {
+  margin: 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 1280px) {
+  figure img {
+    max-height: 64px;
+    max-width: 128px;
+  }
+  progress {
+    width: 84px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .skills-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  figure img {
+  max-height: 96px;
+  }
+}
+
+@media (max-width: 768px) {
+  figure img {
+    max-height: 72px;
+    max-width: 144px;
+  }
+}
+
+@media (max-width: 560px) {
+  figure img {
+    max-height: 64px;
+    max-width: 128px;
+  }
+  progress {
+    width: 72px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  figure img {
+    max-height: 96px;
+    }
+}
+
+@media (max-width: 400px) {
+
+  figcaption, figure p {
+    font-size: 14px;
+  }
+  progress {
+    width: 64px;
+  }
+}
