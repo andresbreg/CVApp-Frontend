@@ -11,6 +11,9 @@
     <a href="https://www.linkedin.com/in/andr%C3%A9s-bregant-188a94165/" target="_blank">
       <img class="icon" src="../../assets/icons/linkedin-icon.png" alt="Icono de LinkedIn">
     </a>
-    <button class="login-button">Login</button>
+    <button class="login-button" (click)="openModal()">Editar</button>
   </div>
 </nav>
+<aside *ngIf="modalSwitch == true">
+  <app-login></app-login>
+</aside>
