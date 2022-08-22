@@ -1,9 +1,9 @@
-<section class="contact-container">
+<section class="contact-container" *ngFor="let item of data">
   <address>
     <div class="location-container">
       <div class="location">
         <img src="../../assets/icons/location-violet-icon.png" alt="Location Icon">
-        <p>Buenos Aires, Argentina</p>
+        <p> {{ item.location }}</p>
       </div>
       <abbr title="Editar Ubicación">
         <img src="../../assets/icons/edit-icon.png" alt="Edit Icon" class="edit-button">
@@ -12,7 +12,7 @@
     <div class=whatsapp-container>
       <div class="whatsapp">
         <img src="../../assets/icons/whatsapp-violet-icon.png" alt="WhatsApp Icon">
-        <p>+54 (11) 3443-3293</p>
+        <p>{{ item.phoneNumber }}</p>
       </div>
       <abbr title="Editar Número">
         <img src="../../assets/icons/edit-icon.png" alt="Edit Icon" class="edit-button">
@@ -21,7 +21,7 @@
     <div class="email-container">
       <div class="email">
         <img src="../../assets/icons/email-violet-icon.png" alt="Email Icon">
-        <p>andresbregant@gmail.com</p>
+        <p>{{ item.email }}</p>
       </div>
       <abbr title="Editar Correo">
         <img src="../../assets/icons/edit-icon.png" alt="Edit Icon" class="edit-button">

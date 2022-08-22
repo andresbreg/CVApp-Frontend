@@ -1,4 +1,4 @@
-<section class="about-container">
+<section class="about-container" *ngFor="let element of data">
   <app-contact></app-contact>
   <div class="introduction">
     <div class="section-title">
@@ -8,7 +8,7 @@
       </abbr>
     </div>
     <div class="section-content">
-      <p>Soy Desarrollador Web. Soy Desarrollador Web. Soy Desarrollador Web. Soy Desarrollador Web. Soy Desarrollador Web. Soy Desarrollador Web. Soy Desarrollador Web. Soy Desarrollador Web. Soy Desarrollador Web. Soy Desarrollador Web. Soy Desarrollador Web. Soy Desarrollador Web. Soy Desarrollador Web. Soy Desarrollador Web. Soy Desarrollador Web.</p>
+      <p>{{ element.about }}</p>
     </div>
   </div>
 </section>
