@@ -3,39 +3,28 @@
     <h2>Formación</h2>
   </div>
   <div class="education-cards-container">
-    <div class="education-card">
-      <div class="education-header">
-        <div></div>
-        <img class="education-logo" src="../../assets/logos/platzi-logo.png" alt="Logo de Platzi">
-        <div class="edit-icons">
-          <abbr title="Editar Formación">
-            <img src="../../assets/icons/edit-icon.png" alt="Edit Icon" id="edit-button">
-          </abbr>
-          <abbr title="Eliminar Formación">
-            <img src="../../assets/icons/delete-icon.png" alt="Delete Icon" id="delete-button">
-          </abbr>
-        </div>
-      </div>
-      <h4>2021 - Actualidad</h4>
-      <h3>Platzi</h3>
-      <p>Escuela de Desarrollo Web</p>
-    </div>
-    <div class="education-card">
-      <div class="education-header">
-        <div></div>
-        <img class="education-logo" src="https://firebasestorage.googleapis.com/v0/b/imagenes-5d811.appspot.com/o/_1660774831209?alt=media&token=d4ca4b34-baf8-497f-93e8-64a764d404de" alt="Logo de Argentina Programa">
-        <div class="edit-icons">
-          <abbr title="Editar Formación">
-            <img src="../../assets/icons/edit-icon.png" alt="Edit Icon" id="edit-button">
-          </abbr>
-          <abbr title="Eliminar Formación">
-            <img src="../../assets/icons/delete-icon.png" alt="Delete Icon" id="delete-button">
-          </abbr>
-        </div>
-      </div>
-      <h4>2021 - 2022</h4>
-      <h3>Argentina Programa</h3>
-      <p>Full Stack Developer Jr.</p>
-    </div>
+    <table *ngFor="let item of data">
+      <td>
+        <thead>
+          <tr>
+            <div class="spacer"></div>
+            <img class="education-logo" [src]="item.logoUrl" alt="Logo de {{ item.name }}"/>
+            <div class="edit-icons">
+              <abbr title="Editar Formación">
+                <img src="../../assets/icons/edit-icon.png" alt="Edit Icon" id="edit-button">
+              </abbr>
+              <abbr title="Eliminar Formación">
+                <img src="../../assets/icons/delete-icon.png" alt="Delete Icon" id="delete-button">
+              </abbr>
+            </div>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="date">{{ item.startDate }} - {{ item.endDate }}</tr>
+          <tr id="name">{{ item.name }}</tr>
+          <tr id="course">{{ item.course }}</tr>
+        </tbody>
+      </td>
+    </table>
   </div>
 </section>

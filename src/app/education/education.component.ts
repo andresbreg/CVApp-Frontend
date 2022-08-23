@@ -9,11 +9,11 @@ import { GetDataService } from './../services/get-data.service';
 
 export class EducationComponent implements OnInit {
 
-  data:any;
+  data:any=[];
 
-  constructor(private dataService: GetDataService) { }
+  constructor(private dataService:GetDataService) {}
 
-  ngOnInit():void {
+  ngOnInit(): void {
     this.dataService.getData('education').subscribe ( response => {
       this.data = response;
     });

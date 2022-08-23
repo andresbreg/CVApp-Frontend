@@ -8,6 +8,15 @@ import { Observable } from 'rxjs';
 
 export class GetDataService {
 
+  education = {
+    id: String,
+    logoUrl: String,
+    startDate: String,
+    endDate: String,
+    name: String,
+    course: String
+  };
+
   constructor(private http:HttpClient) {}
 
   apiUrl='http://localhost:8080/';
