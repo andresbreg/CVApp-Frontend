@@ -9,7 +9,7 @@ import { GetDataService } from './../services/get-data.service';
 
 export class SkillsComponent implements OnInit {
 
-  data:any;
+  data:any=[];
 
   constructor(private dataService: GetDataService) {}
 

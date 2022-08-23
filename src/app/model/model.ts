@@ -15,3 +15,10 @@ export class Experience {
   name!: String;
   job!: String;
 }
+
+export class Skill {
+  id!: String;
+  logoUrl!: String;
+  name!: String;
+  skillLevel!: String;
+}

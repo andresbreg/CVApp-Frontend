@@ -26,6 +26,13 @@ export class GetDataService {
     job: String
   };
 
+  skill = {
+    id: String,
+    logoUrl: String,
+    name: String,
+    skillLevel: String
+  };
+
   constructor(private http:HttpClient) {}
 
   apiUrl='http://localhost:8080/';
