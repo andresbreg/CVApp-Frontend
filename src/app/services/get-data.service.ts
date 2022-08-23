@@ -17,6 +17,15 @@ export class GetDataService {
     course: String
   };
 
+  experience = {
+    id: String,
+    logoUrl: String,
+    startDate: String,
+    endDate: String,
+    name: String,
+    job: String
+  };
+
   constructor(private http:HttpClient) {}
 
   apiUrl='http://localhost:8080/';

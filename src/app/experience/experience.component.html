@@ -3,39 +3,28 @@
     <h2>Experiencia</h2>
   </div>
   <div class="experience-cards-container">
-    <div class="experience-card">
-      <div class="experience-header">
-        <div></div>
-        <img class="experience-logo" src="../../assets/logos/tu-pagina-en-la-web-logo.png" alt="Logo de Tu Página en la Web">
-        <div class="edit-icons">
-          <abbr title="Editar Experiencia">
-            <img src="../../assets/icons/edit-icon.png" alt="Edit Icon" id="edit-button">
-          </abbr>
-          <abbr title="Eliminar Experiencia">
-            <img src="../../assets/icons/delete-icon.png" alt="Delete Icon" id="delete-button">
-          </abbr>
-        </div>
-      </div>
-      <h4>2020 - Actualidad</h4>
-      <h3>Tu Página en la Web</h3>
-      <p>Diseño Web con WordPress</p>
-    </div>
-    <div class="experience-card">
-      <div class="experience-header">
-        <div></div>
-        <img class="experience-logo" src="../../assets/logos/vitalcer-logo.png" alt="Logo de Vitalcer">
-        <div class="edit-icons">
-          <abbr title="Editar Experiencia">
-            <img src="../../assets/icons/edit-icon.png" alt="Edit Icon" id="edit-button">
-          </abbr>
-          <abbr title="Eliminar Experiencia">
-            <img src="../../assets/icons/delete-icon.png" alt="Delete Icon" id="delete-button">
-          </abbr>
-        </div>
-      </div>
-      <h4>2019 - 2022</h4>
-      <h3>Vitalcer</h3>
-      <p>Gestión de Redes Sociales</p>
-    </div>
+    <table *ngFor="let item of data">
+      <td>
+        <thead>
+          <tr>
+            <div class="spacer"></div>
+            <img class="experience-logo" [src]="item.logoUrl" alt="Logo de {{ item.name }}"/>
+            <div class="edit-icons">
+              <abbr title="Editar Experiencia">
+                <img src="../../assets/icons/edit-icon.png" alt="Edit Icon" id="edit-button">
+              </abbr>
+              <abbr title="Eliminar Experiencia">
+                <img src="../../assets/icons/delete-icon.png" alt="Delete Icon" id="delete-button">
+              </abbr>
+            </div>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="date">{{ item.startDate }} - {{ item.endDate }}</tr>
+          <tr id="name">{{ item.name }}</tr>
+          <tr id="job">{{ item.job }}</tr>
+        </tbody>
+      </td>
+    </table>
   </div>
 </section>

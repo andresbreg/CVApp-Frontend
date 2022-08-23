@@ -6,3 +6,12 @@ export class Education {
   name!: String;
   course!: String;
 }
+
+export class Experience {
+  id!: String;
+  logoUrl!: String;
+  startDate!: String;
+  endDate!: String;
+  name!: String;
+  job!: String;
+}
