@@ -18,4 +18,10 @@ export class ExperienceComponent implements OnInit {
       this.data = response;
     });
   }
+
+  remove(id:String) {
+    this.dataService.deleteElement('experience',id).subscribe (
+      response => {this.ngOnInit()}
+    );
+  }
 }

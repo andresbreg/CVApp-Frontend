@@ -40,4 +40,8 @@ export class GetDataService {
   getData(table: string): Observable<any> {
     return this.http.get(`${this.apiUrl}${table}`);
   }
+
+  deleteElement(table:string, id:String):Observable<any> {
+    return this.http.delete(`${this.apiUrl}${table}` + '/' + id);
+  }
 }

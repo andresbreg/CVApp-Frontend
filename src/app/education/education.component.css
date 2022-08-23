@@ -38,32 +38,38 @@ thead tr {
 }
 
 .spacer {
-  width: 60px;
+  width: 52px;
 }
 
 .edit-icons {
-  width: 44px;
+  width: 40px;
   display: flex;
-  justify-content: space-between;
   align-self: flex-start;
+  justify-content: space-between;
   margin-top: 12px;
-  margin-right: 16px;
+  margin-right: 12px;
   /* display: none; */
 }
 
 abbr {
-  display: flex;
-  align-items: center;
+  height: 18px;
 }
 
-abbr img {
-  width: 12px;
-  height: 12px;
+button {
+  border: none;
+  background-color: antiquewhite;
+  padding: 0;
+}
+
+abbr input {
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   padding: 4px;
+  border: none;
 }
 
-abbr img:hover {
+abbr input:hover {
   cursor: pointer;
   transform: scale(1.1);
   transition: 0.3s;
@@ -110,6 +116,9 @@ font-size: 20px;
 }
 
 @media (max-width: 400px) {
+  thead tr {
+    height: 72px;
+  }
   .spacer {
     width: 48px;
   }
@@ -117,13 +126,7 @@ font-size: 20px;
     transform: scale(0.84);
   }
   .edit-icons {
-    width: 40px;
+    margin-top: 8px;
     margin-right: 8px;
-  }
-  abbr img {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    padding: 4px;
   }
 }

@@ -6,7 +6,9 @@
 
     <div class="skill" *ngFor="let item of data">
       <abbr title="Eliminar Habilidad">
-        <img src="../../assets/icons/delete-icon.png" alt="Delete Icon" id="delete-button">
+        <button type="button" (click)="remove(item.id)">
+          <input type="image" src="../../assets/icons/delete-icon.png" alt="Delete Icon" id="delete-button">
+        </button>
       </abbr>
       <figure>
         <img [src]="item.logoUrl" alt="Logo de {{ item.name }}">

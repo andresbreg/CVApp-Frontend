@@ -18,4 +18,10 @@ export class SkillsComponent implements OnInit {
       this.data = response;
     });
   }
+
+  remove(id:String) {
+    this.dataService.deleteElement('skills',id).subscribe (
+      response => {this.ngOnInit()}
+    );
+  }
 }

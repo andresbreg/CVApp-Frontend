@@ -18,4 +18,10 @@ export class EducationComponent implements OnInit {
       this.data = response;
     });
   }
+
+  remove(id:String) {
+    this.dataService.deleteElement('education',id).subscribe (
+      response => {this.ngOnInit()}
+    );
+  }
 }

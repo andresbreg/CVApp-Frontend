@@ -11,10 +11,14 @@
             <img class="experience-logo" [src]="item.logoUrl" alt="Logo de {{ item.name }}"/>
             <div class="edit-icons">
               <abbr title="Editar Experiencia">
-                <img src="../../assets/icons/edit-icon.png" alt="Edit Icon" id="edit-button">
+                <button>
+                  <input type="image" src="../../assets/icons/edit-icon.png" alt="Edit Icon" id="edit-button">
+                </button>
               </abbr>
               <abbr title="Eliminar Experiencia">
-                <img src="../../assets/icons/delete-icon.png" alt="Delete Icon" id="delete-button">
+                <button type="button" (click)="remove(item.id)">
+                  <input type="image" src="../../assets/icons/delete-icon.png" alt="Delete Icon" id="delete-button">
+                </button>
               </abbr>
             </div>
           </tr>

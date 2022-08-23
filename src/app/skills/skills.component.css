@@ -24,7 +24,13 @@ abbr {
   margin-bottom: 4px;
 }
 
-abbr img {
+button {
+  border: none;
+  background-color: antiquewhite;
+  padding: 0;
+}
+
+abbr input {
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -32,7 +38,7 @@ abbr img {
   margin-right: -16px;
 }
 
-abbr img:hover {
+abbr input:hover {
   cursor: pointer;
   transform: scale(1.1);
   transition: 0.3s;
