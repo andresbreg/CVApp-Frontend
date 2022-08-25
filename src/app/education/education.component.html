@@ -1,13 +1,20 @@
 <section class="education-container">
   <div class="section-title">
+    <div class="title-spacer"></div>
     <h2>Formación</h2>
+    <abbr title="Agregar Formación">
+      <a href="#" (click)="openAddEducation()">
+        <img src="../../assets/icons/add-icon.png" alt="Add Icon" id="add-icon">
+      </a>
+    </abbr>
   </div>
+  <app-education-add *ngIf="addEducation"></app-education-add>
   <div class="education-cards-container">
     <table *ngFor="let item of data">
       <td>
         <thead>
           <tr>
-            <div class="spacer"></div>
+            <div class="card-spacer"></div>
             <img class="education-logo" [src]="item.logoUrl" alt="Logo de {{ item.name }}"/>
             <div class="edit-icons">
               <abbr title="Editar Formación">

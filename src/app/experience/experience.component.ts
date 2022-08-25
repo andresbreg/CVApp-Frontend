@@ -10,6 +10,7 @@ import { GetDataService } from './../services/get-data.service';
 export class ExperienceComponent implements OnInit {
 
   data:any=[];
+  addExperience:Boolean = false;
 
   constructor(private dataService: GetDataService) {}
 
@@ -23,5 +24,14 @@ export class ExperienceComponent implements OnInit {
     this.dataService.deleteElement('experience',id).subscribe (
       response => {this.ngOnInit()}
     );
+  }
+
+  openAddExperience() {
+    if(this.addExperience) {
+      this.addExperience = false;
+    } else {
+      this.addExperience = true;
+    }
+    return false;
   }
 }

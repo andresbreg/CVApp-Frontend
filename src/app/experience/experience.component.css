@@ -1,5 +1,12 @@
 .section-title {
   background-color: #1976d2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-spacer {
+  width: 48px;
 }
 
 h2 {
@@ -8,6 +15,22 @@ h2 {
   text-transform: uppercase;
   text-align: center;
   color: white;
+}
+
+.section-title abbr {
+  width: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.section-title abbr a img {
+  width: 24px;
+}
+
+.section-title abbr a img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 
 .experience-cards-container {
@@ -37,7 +60,7 @@ thead tr {
   margin-top: 12px;
 }
 
-.spacer {
+.card-spacer {
   width: 52px;
 }
 
@@ -51,17 +74,17 @@ thead tr {
   /* display: none; */
 }
 
-abbr {
+.edit-icons abbr {
   height: 18px;
 }
 
-button {
+.edit-icons abbr button {
   border: none;
   background-color: antiquewhite;
   padding: 0;
 }
 
-abbr input {
+.edit-icons abbr input {
   width: 10px;
   height: 10px;
   border-radius: 50%;

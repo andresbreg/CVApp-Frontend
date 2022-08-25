@@ -10,6 +10,7 @@ import { GetDataService } from './../services/get-data.service';
 export class SkillsComponent implements OnInit {
 
   data:any=[];
+  addSkill:Boolean = false;
 
   constructor(private dataService: GetDataService) {}
 
@@ -23,5 +24,14 @@ export class SkillsComponent implements OnInit {
     this.dataService.deleteElement('skills',id).subscribe (
       response => {this.ngOnInit()}
     );
+  }
+
+  openAddSkill() {
+    if(this.addSkill) {
+      this.addSkill = false;
+    } else {
+      this.addSkill = true;
+    }
+    return false;
   }
 }

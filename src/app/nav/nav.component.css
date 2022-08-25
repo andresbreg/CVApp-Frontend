@@ -51,7 +51,7 @@ a {
   width: 96px;
   height: 32px;
   margin: auto 24px;
-  background-color: olivedrab;
+  background-color: rgb(119, 163, 30);
   border: none;
   border-radius: 25px;
   font-size: 14px;
@@ -62,7 +62,7 @@ a {
 }
 
 .login-button:hover {
-  background-color: rgb(119, 163, 30);
+  background-color: olivedrab;
 }
 
 /* Modal */

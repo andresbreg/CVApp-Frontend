@@ -14,6 +14,12 @@ import { ExperienceComponent } from './experience/experience.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { LoginComponent } from './login/login.component';
 import { EditComponent } from './edit/edit.component';
+import { EducationAddComponent } from './education-add/education-add.component';
+import { ExperienceAddComponent } from './experience-add/experience-add.component';
+import { SkillAddComponent } from './skill-add/skill-add.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -28,13 +34,19 @@ import { EditComponent } from './edit/edit.component';
     ProjectsComponent,
     LoginComponent,
     EditComponent,
+    EducationAddComponent,
+    ExperienceAddComponent,
+    SkillAddComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage()),
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+ }

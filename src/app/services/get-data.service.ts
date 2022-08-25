@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Education } from '../model/model';
 
 @Injectable({
   providedIn: 'root'
@@ -33,9 +34,9 @@ export class GetDataService {
     skillLevel: String
   };
 
-  constructor(private http:HttpClient) {}
-
   apiUrl='http://localhost:8080/';
+
+  constructor(private http:HttpClient) {}
 
   getData(table: string): Observable<any> {
     return this.http.get(`${this.apiUrl}${table}`);
@@ -43,5 +44,9 @@ export class GetDataService {
 
   deleteElement(table:string, id:String):Observable<any> {
     return this.http.delete(`${this.apiUrl}${table}` + '/' + id);
+  }
+
+  addElement(table:string, model:any):Observable<any> {
+    return this.http.post(`${this.apiUrl}${table}`, model);
   }
 }

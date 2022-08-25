@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { GetDataService } from './../services/get-data.service';
 
 @Component({
@@ -9,7 +9,8 @@ import { GetDataService } from './../services/get-data.service';
 
 export class EducationComponent implements OnInit {
 
-  data:any=[];
+  data:any = [];
+  addEducation:Boolean = false;
 
   constructor(private dataService:GetDataService) {}
 
@@ -23,5 +24,14 @@ export class EducationComponent implements OnInit {
     this.dataService.deleteElement('education',id).subscribe (
       response => {this.ngOnInit()}
     );
+  }
+
+  openAddEducation() {
+    if(this.addEducation) {
+      this.addEducation = false;
+    } else {
+      this.addEducation = true;
+    }
+    return false;
   }
 }

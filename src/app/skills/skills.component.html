@@ -1,9 +1,15 @@
 <section class="skills">
   <div class="section-title">
+    <div class="title-spacer"></div>
     <h2>Habilidades</h2>
+    <abbr title="Agregar Habilidad">
+      <a href="#" (click)="openAddSkill()">
+        <img src="../../assets/icons/add-icon.png" alt="Add Icon" id="add-icon">
+      </a>
+    </abbr>
   </div>
+  <app-skill-add *ngIf="addSkill"></app-skill-add>
   <div class="skills-container">
-
     <div class="skill" *ngFor="let item of data">
       <abbr title="Eliminar Habilidad">
         <button type="button" (click)="remove(item.id)">
@@ -13,7 +19,15 @@
       <figure>
         <img [src]="item.logoUrl" alt="Logo de {{ item.name }}">
         <figcaption>{{ item.name }}</figcaption>
-        <div class="progress-level">
+        <div class="progress-level" *ngIf="item.skillLevel=='Básico'">
+          <progress value="0.3"></progress>
+          <p>{{ item.skillLevel }}</p>
+        </div>
+        <div class="progress-level" *ngIf="item.skillLevel=='Intermedio'">
+          <progress value="0.6"></progress>
+          <p>{{ item.skillLevel }}</p>
+        </div>
+        <div class="progress-level" *ngIf="item.skillLevel=='Avanzado'">
           <progress value="0.9"></progress>
           <p>{{ item.skillLevel }}</p>
         </div>
