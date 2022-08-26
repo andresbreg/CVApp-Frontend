@@ -1,32 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { GetDataService } from './../services/get-data.service';
 import { DomSanitizer } from "@angular/platform-browser";
 import { Storage, ref, uploadBytes, getDownloadURL } from "@angular/fire/storage";
-import { Education } from '../model/model';
+import { Skill } from '../model/model';
 
 @Component({
-  selector: 'app-education-add',
-  templateUrl: './education-add.component.html',
-  styleUrls: ['./education-add.component.css']
+  selector: 'app-skill-edit',
+  templateUrl: './skill-edit.component.html',
+  styleUrls: ['./skill-edit.component.css']
 })
 
-export class EducationAddComponent implements OnInit {
+export class SkillEditComponent implements OnInit {
 
   file:any = [];
   filePreview:string;
 
-  newEducationItem:Education = {
+  @Input() receivedId:string;
+  @Input() skillItem:Skill = {
     id:'',
     logoUrl:'',
-    startDate:'',
-    endDate:'',
     name:'',
-    course:''
+    skillLevel:''
   }
 
   constructor(private dataService:GetDataService,
               private sanitizer:DomSanitizer,
-              private storage:Storage) {}
+              private storage:Storage) { }
 
   ngOnInit(): void {
   }
@@ -71,15 +70,15 @@ export class EducationAddComponent implements OnInit {
     // Guardando URL
     getDownloadURL(storageReference)
       .then(url =>  {
-        this.newEducationItem.logoUrl = url
-        console.log(this.newEducationItem.logoUrl)
+        this.skillItem.logoUrl = url
+        console.log(this.skillItem.logoUrl)
       })
       .catch(error => console.log(error))
   }
 
-  saveElement() {
-    this.dataService.addElement('education', this.newEducationItem).subscribe (
+  updateElement() {
+    this.dataService.editElement('skills', this.skillItem, this.skillItem.id).subscribe (
       response => {location.reload()}
-      );
+    );
   }
 }

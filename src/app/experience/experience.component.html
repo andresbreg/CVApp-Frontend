@@ -9,6 +9,7 @@
     </abbr>
   </div>
   <app-experience-add *ngIf="addExperience"></app-experience-add>
+  <app-experience-edit *ngIf="editExperience" [experienceItem]="this.experienceItem"></app-experience-edit>
   <div class="experience-cards-container">
     <table *ngFor="let item of data">
       <td>
@@ -18,7 +19,7 @@
             <img class="experience-logo" [src]="item.logoUrl" alt="Logo de {{ item.name }}"/>
             <div class="edit-icons">
               <abbr title="Editar Experiencia">
-                <button>
+                <button type="button" (click)="openEditExperience();getElement(item.id)">
                   <input type="image" src="../../assets/icons/edit-icon.png" alt="Edit Icon" id="edit-button">
                 </button>
               </abbr>

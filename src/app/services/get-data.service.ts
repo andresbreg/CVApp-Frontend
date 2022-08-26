@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Education } from '../model/model';
 
 @Injectable({
   providedIn: 'root'
@@ -38,15 +37,23 @@ export class GetDataService {
 
   constructor(private http:HttpClient) {}
 
-  getData(table: string): Observable<any> {
+  getData(table: String): Observable<any> {
     return this.http.get(`${this.apiUrl}${table}`);
   }
 
-  deleteElement(table:string, id:String):Observable<any> {
+  deleteElement(table:String, id:String): Observable<any> {
     return this.http.delete(`${this.apiUrl}${table}` + '/' + id);
   }
 
-  addElement(table:string, model:any):Observable<any> {
+  addElement(table:String, model:any): Observable<any> {
     return this.http.post(`${this.apiUrl}${table}`, model);
+  }
+
+  getElement(table:String, id:String): Observable<any> {
+    return this.http.get(`${this.apiUrl}${table}` + '/' + id);
+  }
+
+  editElement(table:String, model:any, id:String): Observable<any> {
+    return this.http.put(`${this.apiUrl}${table}` + '/' + id, model);
   }
 }

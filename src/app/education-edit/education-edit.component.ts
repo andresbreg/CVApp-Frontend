@@ -1,21 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { GetDataService } from './../services/get-data.service';
 import { DomSanitizer } from "@angular/platform-browser";
 import { Storage, ref, uploadBytes, getDownloadURL } from "@angular/fire/storage";
 import { Education } from '../model/model';
 
 @Component({
-  selector: 'app-education-add',
-  templateUrl: './education-add.component.html',
-  styleUrls: ['./education-add.component.css']
+  selector: 'app-education-edit',
+  templateUrl: './education-edit.component.html',
+  styleUrls: ['./education-edit.component.css']
 })
-
-export class EducationAddComponent implements OnInit {
+export class EducationEditComponent implements OnInit {
 
   file:any = [];
   filePreview:string;
 
-  newEducationItem:Education = {
+  @Input() receivedId:string;
+  @Input() educationItem:Education = {
     id:'',
     logoUrl:'',
     startDate:'',
@@ -71,15 +71,15 @@ export class EducationAddComponent implements OnInit {
     // Guardando URL
     getDownloadURL(storageReference)
       .then(url =>  {
-        this.newEducationItem.logoUrl = url
-        console.log(this.newEducationItem.logoUrl)
+        this.educationItem.logoUrl = url
+        console.log(this.educationItem.logoUrl)
       })
       .catch(error => console.log(error))
   }
 
-  saveElement() {
-    this.dataService.addElement('education', this.newEducationItem).subscribe (
+  updateElement() {
+    this.dataService.editElement('education', this.educationItem, this.educationItem.id).subscribe (
       response => {location.reload()}
-      );
+    );
   }
 }

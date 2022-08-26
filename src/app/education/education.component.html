@@ -9,6 +9,7 @@
     </abbr>
   </div>
   <app-education-add *ngIf="addEducation"></app-education-add>
+  <app-education-edit *ngIf="editEducation" [educationItem]="this.educationItem"></app-education-edit>
   <div class="education-cards-container">
     <table *ngFor="let item of data">
       <td>
@@ -18,7 +19,7 @@
             <img class="education-logo" [src]="item.logoUrl" alt="Logo de {{ item.name }}"/>
             <div class="edit-icons">
               <abbr title="Editar Formación">
-                <button>
+                <button type="button" (click)="openEditEducation();getElement(item.id)">
                   <input type="image" src="../../assets/icons/edit-icon.png" alt="Edit Icon" id="edit-button">
                 </button>
               </abbr>

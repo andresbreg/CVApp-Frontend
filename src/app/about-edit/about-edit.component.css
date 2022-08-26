@@ -1,0 +1,61 @@
+/* .edit-about-container {
+} */
+
+form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  text-align: center;
+}
+
+.about-textarea-field {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+textarea {
+  width: 100%;
+}
+
+fieldset {
+  padding: 12px;
+  border: none;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  justify-self: start;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  justify-self: center;
+}
+
+.edit-button-field {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .edit-button {
+  width: 180px;
+  height: 36px;
+  margin: auto 24px;
+  background-color: orange;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: white;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  background-color: rgb(255, 175, 28);
+}

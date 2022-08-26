@@ -1,3 +1,10 @@
+export class About {
+  location!: String;
+  phoneNumber!: String;
+  email!: String;
+  about!: String;
+}
+
 export class Education {
   id!: String;
   logoUrl!: String;

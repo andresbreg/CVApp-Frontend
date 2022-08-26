@@ -1,0 +1,23 @@
+<section class="edit-about-container">
+  <form>
+    <fieldset class="about-textarea-field">
+      <label for="about">Presentación</label>
+      <textarea id="about" name="about" [(ngModel)]="aboutItem.about"></textarea>
+    </fieldset>
+    <fieldset>
+      <label for="location">Ubicación</label>
+      <input type="text" id="location" name="location" [(ngModel)]="aboutItem.location">
+    </fieldset>
+    <fieldset>
+      <label for="phoneNumber">Número de Teléfono</label>
+      <input type="text" id="phoneNumber" name="phoneNumber" [(ngModel)]="aboutItem.phoneNumber">
+    </fieldset>
+    <fieldset>
+      <label for="email">Contacto</label>
+      <input type="text" id="email" name="email" [(ngModel)]="aboutItem.email">
+    </fieldset>
+    <fieldset class="edit-button-field">
+      <button class="edit-button" (click)="updateElement()">Actualizar Información</button>
+    </fieldset>
+  </form>
+</section>

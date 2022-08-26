@@ -9,13 +9,21 @@
     </abbr>
   </div>
   <app-skill-add *ngIf="addSkill"></app-skill-add>
+  <app-skill-edit *ngIf="editSkill" [skillItem]="this.skillItem"></app-skill-edit>
   <div class="skills-container">
     <div class="skill" *ngFor="let item of data">
-      <abbr title="Eliminar Habilidad">
-        <button type="button" (click)="remove(item.id)">
-          <input type="image" src="../../assets/icons/delete-icon.png" alt="Delete Icon" id="delete-button">
-        </button>
-      </abbr>
+      <div class="buttons-container">
+        <abbr title="Editar Habilidad">
+          <button type="button" (click)="openEditSkill();getElement(item.id)">
+            <input type="image" src="../../assets/icons/edit-icon.png" alt="Edit Icon" id="edit-button">
+          </button>
+        </abbr>
+        <abbr title="Eliminar Habilidad">
+          <button type="button" (click)="remove(item.id)">
+            <input type="image" src="../../assets/icons/delete-icon.png" alt="Delete Icon" id="delete-button">
+          </button>
+        </abbr>
+      </div>
       <figure>
         <img [src]="item.logoUrl" alt="Logo de {{ item.name }}">
         <figcaption>{{ item.name }}</figcaption>
