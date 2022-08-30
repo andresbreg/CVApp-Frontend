@@ -1,5 +1,6 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GetDataService } from './../services/get-data.service';
+import { UserService } from '../services/user.service';
 import { Education } from '../model/model';
 
 @Component({
@@ -14,6 +15,7 @@ export class EducationComponent implements OnInit {
 
   addEducation:Boolean = false;
   editEducation:Boolean = false;
+  sessionSwitch:Boolean;
 
   educationItem:Education = {
     id:'',
@@ -24,11 +26,15 @@ export class EducationComponent implements OnInit {
     course:''
   }
 
-  constructor(private dataService:GetDataService) {}
+  constructor(private dataService:GetDataService,
+              private userService:UserService) {}
 
   ngOnInit(): void {
     this.dataService.getData('education').subscribe ( response => {
       this.data = response})
+    this.userService.session.subscribe((value: Boolean) => {
+      this.sessionSwitch = value;
+    });
   }
 
   remove(id:string) {

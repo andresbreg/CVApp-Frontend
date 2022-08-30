@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GetDataService } from './../services/get-data.service';
+import { UserService } from '../services/user.service';
 import { Skill } from '../model/model';
 
 @Component({
@@ -14,6 +15,7 @@ export class SkillsComponent implements OnInit {
 
   addSkill:Boolean = false;
   editSkill:Boolean = false;
+  sessionSwitch:Boolean;
 
   skillItem:Skill = {
     id:'',
@@ -22,11 +24,15 @@ export class SkillsComponent implements OnInit {
     skillLevel:''
   }
 
-  constructor(private dataService: GetDataService) {}
+  constructor(private dataService: GetDataService,
+              private userService:UserService) {}
 
   ngOnInit(): void {
     this.dataService.getData('skills').subscribe ( response => {
       this.data = response})
+    this.userService.session.subscribe((value: Boolean) => {
+      this.sessionSwitch = value;
+    });
   }
 
   remove(id:String) {

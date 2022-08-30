@@ -2,7 +2,8 @@
   <div class="section-title">
     <div class="title-spacer"></div>
     <h2>Formación</h2>
-    <abbr title="Agregar Formación">
+    <div class="title-spacer" *ngIf="this.sessionSwitch != true"></div>
+    <abbr title="Agregar Formación" *ngIf="this.sessionSwitch == true">
       <a href="#" (click)="openAddEducation()">
         <img src="../../assets/icons/add-icon.png" alt="Add Icon" id="add-icon">
       </a>
@@ -18,12 +19,12 @@
             <div class="card-spacer"></div>
             <img class="education-logo" [src]="item.logoUrl" alt="Logo de {{ item.name }}"/>
             <div class="edit-icons">
-              <abbr title="Editar Formación">
+              <abbr title="Editar Formación" *ngIf="this.sessionSwitch == true">
                 <button type="button" (click)="openEditEducation();getElement(item.id)">
                   <input type="image" src="../../assets/icons/edit-icon.png" alt="Edit Icon" id="edit-button">
                 </button>
               </abbr>
-              <abbr title="Eliminar Formación">
+              <abbr title="Eliminar Formación" *ngIf="this.sessionSwitch == true">
                 <button type="button" (click)="remove(item.id)">
                   <input type="image" src="../../assets/icons/delete-icon.png" alt="Delete Icon" id="delete-button">
                 </button>

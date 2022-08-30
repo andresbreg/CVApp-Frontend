@@ -1,0 +1,15 @@
+section {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+h2, label {
+  display: block;
+  margin: 8px 0;
+}
+
+input, button {
+  width: 100%;
+}

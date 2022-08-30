@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GetDataService } from './../services/get-data.service';
+import { UserService } from '../services/user.service';
 import { About } from '../model/model';
 
 @Component({
@@ -11,7 +12,9 @@ import { About } from '../model/model';
 export class AboutComponent implements OnInit {
 
   data:any = [];
+
   editAbout:Boolean = false;
+  sessionSwitch:Boolean;
 
   aboutItem:About = {
     location:'',
@@ -20,11 +23,15 @@ export class AboutComponent implements OnInit {
     about:''
   }
 
-  constructor(private dataService: GetDataService) {}
+  constructor(private dataService: GetDataService,
+              private userService:UserService) {}
 
   ngOnInit(): void {
     this.dataService.getData('about').subscribe ( response => {
       this.data = response})
+    this.userService.session.subscribe((value: Boolean) => {
+      this.sessionSwitch = value;
+    });
   }
 
   getElement(id:string) {

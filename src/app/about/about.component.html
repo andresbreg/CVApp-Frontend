@@ -4,7 +4,7 @@
   <div class="introduction">
     <div class="section-title">
       <h3>Presentación</h3>
-      <abbr title="Editar Presentación">
+      <abbr title="Editar Presentación" *ngIf="this.sessionSwitch == true">
         <img src="../../assets/icons/edit-icon.png" alt="Edit Icon" (click)="openEditAbout();getElement('1')">
       </abbr>
     </div>

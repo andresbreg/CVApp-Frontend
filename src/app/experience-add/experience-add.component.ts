@@ -79,7 +79,6 @@ export class ExperienceAddComponent implements OnInit {
 
   saveElement() {
     this.GetDataService.addElement('experience', this.newExperienceItem).subscribe (
-      response => {location.reload()}
-      );
+      response => location.reload());
   }
 }

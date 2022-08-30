@@ -12,7 +12,7 @@ export const environment = {
     authDomain: 'imagenes-5d811.firebaseapp.com',
     messagingSenderId: '955406069806',
   },
-  production: true
+  production: false
 };
 
 /*

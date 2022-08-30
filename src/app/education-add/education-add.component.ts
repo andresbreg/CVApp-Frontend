@@ -79,7 +79,6 @@ export class EducationAddComponent implements OnInit {
 
   saveElement() {
     this.dataService.addElement('education', this.newEducationItem).subscribe (
-      response => {location.reload()}
-      );
+      response => location.reload());
   }
 }

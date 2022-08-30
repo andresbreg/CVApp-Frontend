@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GetDataService } from './../services/get-data.service';
+import { UserService } from '../services/user.service';
 import { Experience } from '../model/model';
 
 @Component({
@@ -14,6 +15,7 @@ export class ExperienceComponent implements OnInit {
 
   addExperience:Boolean = false;
   editExperience:Boolean = false;
+  sessionSwitch:Boolean;
 
   experienceItem:Experience = {
     id:'',
@@ -24,11 +26,15 @@ export class ExperienceComponent implements OnInit {
     job:''
   }
 
-  constructor(private dataService: GetDataService) {}
+  constructor(private dataService: GetDataService,
+              private userService:UserService) {}
 
   ngOnInit(): void {
     this.dataService.getData('experience').subscribe ( response => {
       this.data = response})
+    this.userService.session.subscribe((value: Boolean) => {
+      this.sessionSwitch = value;
+    });
   }
 
   remove(id:String) {

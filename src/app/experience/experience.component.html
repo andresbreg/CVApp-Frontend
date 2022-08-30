@@ -2,7 +2,8 @@
   <div class="section-title">
     <div class="title-spacer"></div>
     <h2>Experiencia</h2>
-    <abbr title="Agregar Experiencia">
+    <div class="title-spacer" *ngIf="this.sessionSwitch != true"></div>
+    <abbr title="Agregar Experiencia" *ngIf="this.sessionSwitch == true">
       <a href="#" (click)="openAddExperience()">
         <img src="../../assets/icons/add-icon.png" alt="Add Icon" id="add-icon">
       </a>
@@ -18,12 +19,12 @@
             <div class="card-spacer"></div>
             <img class="experience-logo" [src]="item.logoUrl" alt="Logo de {{ item.name }}"/>
             <div class="edit-icons">
-              <abbr title="Editar Experiencia">
+              <abbr title="Editar Experiencia" *ngIf="this.sessionSwitch == true">
                 <button type="button" (click)="openEditExperience();getElement(item.id)">
                   <input type="image" src="../../assets/icons/edit-icon.png" alt="Edit Icon" id="edit-button">
                 </button>
               </abbr>
-              <abbr title="Eliminar Experiencia">
+              <abbr title="Eliminar Experiencia" *ngIf="this.sessionSwitch == true">
                 <button type="button" (click)="remove(item.id)">
                   <input type="image" src="../../assets/icons/delete-icon.png" alt="Delete Icon" id="delete-button">
                 </button>

@@ -15,6 +15,7 @@ h2 {
   text-transform: uppercase;
   text-align: center;
   color: white;
+  align-self: center;
 }
 
 .section-title abbr {
