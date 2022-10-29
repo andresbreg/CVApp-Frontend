@@ -1,0 +1,38 @@
+<section class="edit-project-container">
+  <form>
+    <fieldset class="project-name-field">
+      <label for="name">Proyecto</label>
+      <input type="text" id="name" name="name" [(ngModel)]="projectItem.name">
+    </fieldset>
+    <fieldset>
+      <label for="startDate">Desde</label>
+      <input type="text" id="startDate" name="startDate" [(ngModel)]="projectItem.startDate">
+    </fieldset>
+    <fieldset>
+      <label for="endDate">Hasta</label>
+      <input type="text" id="endDate" name="endDate" [(ngModel)]="projectItem.endDate">
+    </fieldset>
+    <fieldset class="project-description-field">
+      <label for="description">Descripción</label>
+      <input type="text" id="description" name="description" [(ngModel)]="projectItem.description">
+    </fieldset>
+    <fieldset class="project-link-field">
+      <label for="link">Enlace</label>
+      <input type="text" id="link" name="link" [(ngModel)]="projectItem.link">
+    </fieldset>
+    <fieldset class="edit-image-field">
+      <label for="url">Cargar Imagen</label>
+      <input type="file" id="url" name="url" (change)="catchFile($event);uploadImage($event)">
+    </fieldset>
+    <fieldset class="edit-item-field">
+      <button class="edit-button" (click)="updateElement()">Actualizar Proyecto</button>
+    </fieldset>
+    <fieldset class="logoUrl">
+      <label for="logoUrl" class="logoUrl">Url de la Imagen</label>
+      <input type="text" id="logoUrl" name="logoUrl" [(ngModel)]="projectItem.logoUrl">
+    </fieldset>
+    <fieldset class="image-field">
+      <img [src]="projectItem.logoUrl" alt="Logo de {{ projectItem.name }}">
+    </fieldset>
+  </form>
+</section>

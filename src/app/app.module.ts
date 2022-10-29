@@ -25,6 +25,8 @@ import { ExperienceEditComponent } from './experience-edit/experience-edit.compo
 import { ProjectsComponent } from './projects/projects.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
+import { ProjectAddComponent } from './project-add/project-add.component';
+import { ProjectEditComponent } from './project-edit/project-edit.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { RegisterFormComponent } from './register-form/register-form.component';
     SkillEditComponent,
     AboutEditComponent,
     RegisterFormComponent,
+    ProjectAddComponent,
+    ProjectEditComponent,
   ],
   imports: [
     BrowserModule,

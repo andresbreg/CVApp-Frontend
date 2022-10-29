@@ -1,0 +1,93 @@
+.add-project-container {
+  padding: 12px 12px 0 12px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr 1fr; */
+  justify-content: center;
+  text-align: center;
+}
+
+fieldset {
+  padding: 12px;
+  border: none;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  justify-self: start;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  justify-self: center;
+}
+
+.project-name-field {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.project-description-field {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.project-link-field {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.add-image-field {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+input[type="file"] {
+  background-color: white;
+  cursor: pointer;
+}
+
+.add-item-field {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+ }
+
+.logoUrl {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.image-field {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.image-field img {
+  max-width: 180px;
+}
+
+ .add-button {
+  width: 180px;
+  height: 36px;
+  margin: auto 24px;
+  background-color: rgb(119, 163, 30);
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: white;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: olivedrab;
+}

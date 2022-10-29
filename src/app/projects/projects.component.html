@@ -1,1 +1,48 @@
-<p>projects works!</p>
+<section class="projects-container">
+  <div class="section-title">
+    <div class="title-spacer"></div>
+    <h2>Proyectos</h2>
+    <div class="title-spacer" *ngIf="this.sessionSwitch != true"></div>
+    <abbr title="Agregar Proyecto" *ngIf="this.sessionSwitch == true">
+      <a href="#" (click)="openAddProject()">
+        <img src="../../assets/icons/add-icon.png" alt="Add Icon" id="add-icon">
+      </a>
+    </abbr>
+  </div>
+  <app-project-add *ngIf="addProject"></app-project-add>
+  <app-project-edit *ngIf="editProject" [projectItem]="this.projectItem"></app-project-edit>
+  <div class="projects-cards-container">
+    <table *ngFor="let item of data">
+      <td>
+        <thead>
+          <tr>
+            <div class="card-spacer"></div>
+            <div class="project-image">
+              <img [src]="item.logoUrl" alt="Logo de {{ item.name }}"/>
+            </div>
+            <div class="edit-icons">
+              <abbr title="Editar Proyecto" *ngIf="this.sessionSwitch == true">
+                <button type="button" (click)="openEditProject();getElement(item.id)">
+                  <input type="image" src="../../assets/icons/edit-icon.png" alt="Edit Icon" id="edit-button">
+                </button>
+              </abbr>
+              <abbr title="Eliminar Proyecto" *ngIf="this.sessionSwitch == true">
+                <button type="button" (click)="remove(item.id)">
+                  <input type="image" src="../../assets/icons/delete-icon.png" alt="Delete Icon" id="delete-button">
+                </button>
+              </abbr>
+            </div>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="date">{{ item.startDate }} - {{ item.endDate }}</tr>
+          <tr id="name">{{ item.name }}</tr>
+          <tr>{{ item.description }}</tr>
+          <tr id="link">
+            <a class="link-button" [href]="item.link" [target]="blank">Ver Proyecto</a>
+          </tr>
+        </tbody>
+      </td>
+    </table>
+  </div>
+</section>

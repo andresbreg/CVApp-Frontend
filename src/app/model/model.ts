@@ -29,3 +29,13 @@ export class Skill {
   name!: String;
   skillLevel!: String;
 }
+
+export class Project {
+  id!: String;
+  logoUrl!: String;
+  startDate!: String;
+  endDate!: String;
+  name!: String;
+  description!: String;
+  link!: String;
+}

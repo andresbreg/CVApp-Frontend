@@ -1,0 +1,38 @@
+<section class="add-project-container">
+  <form>
+    <fieldset class="project-name-field">
+      <label for="name" id="name">Proyecto</label>
+      <input type="text" id="name" name="name" [(ngModel)]="newProjectItem.name">
+    </fieldset>
+    <fieldset>
+      <label for="startDate" id="startDate">Desde</label>
+      <input type="text" id="startDate" name="startDate" [(ngModel)]="newProjectItem.startDate">
+    </fieldset>
+    <fieldset>
+      <label for="endDate" id="endDate">Hasta</label>
+      <input type="text" id="endDate" name="endDate" [(ngModel)]="newProjectItem.endDate">
+    </fieldset>
+    <fieldset class="project-description-field">
+      <label for="description" id="description">Descripción</label>
+      <input type="text" id="description" name="description" [(ngModel)]="newProjectItem.description">
+    </fieldset>
+    <fieldset class="project-link-field">
+      <label for="link" id="link">Enlace</label>
+      <input type="text-a" id="link" name="link" [(ngModel)]="newProjectItem.link">
+    </fieldset>
+    <fieldset class="add-image-field">
+      <label for="url">Cargar Imagen</label>
+      <input type="file" id="url" name="url" (change)="catchFile($event);uploadImage($event)">
+    </fieldset>
+    <fieldset class="add-item-field">
+      <button class="add-button" (click)="saveElement()">Agregar Proyecto</button>
+    </fieldset>
+    <fieldset *ngIf="filePreview" class="logoUrl">
+      <label for="logoUrl" class="urlLogo">Url de la Imagen</label>
+      <input type="text" id="logoUrl" name="logoUrl"[(ngModel)]="newProjectItem.logoUrl">
+    </fieldset>
+    <fieldset class="image-field" *ngIf="filePreview">
+      <img [src]="filePreview" alt="Vista Previa de la Imagen">
+    </fieldset>
+  </form>
+</section>
