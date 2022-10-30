@@ -25,7 +25,7 @@ export class SkillEditComponent implements OnInit {
 
   constructor(private dataService:GetDataService,
               private sanitizer:DomSanitizer,
-              private storage:Storage) { }
+              private storage:Storage) {}
 
   ngOnInit(): void {
   }

@@ -34,7 +34,6 @@ input {
 input[type="file"] {
   background-color: white;
   cursor: pointer;
-  /* display: none; */
 }
 
 .image-field {

@@ -42,7 +42,6 @@ input[type=radio] {
   clear: none;
 }
 
-
 label {
   display: block;
   font-weight: bold;
@@ -67,7 +66,6 @@ input {
 input[type="file"] {
   background-color: white;
   cursor: pointer;
-  /* display: none; */
 }
 
 .image-field {

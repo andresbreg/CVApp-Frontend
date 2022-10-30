@@ -42,7 +42,6 @@ input[type=radio] {
   clear: none;
 }
 
-
 label {
   display: block;
   font-weight: bold;
@@ -67,7 +66,6 @@ input {
 input[type="file"] {
   background-color: white;
   cursor: pointer;
-  /* display: none; */
 }
 
 .image-field {
@@ -86,9 +84,9 @@ input[type="file"] {
   display: grid;
   justify-content: center;
   align-items: center;
- }
+}
 
- .edit-button {
+.edit-button {
   width: 180px;
   height: 36px;
   margin: auto 24px;

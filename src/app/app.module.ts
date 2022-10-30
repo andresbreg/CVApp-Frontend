@@ -6,7 +6,6 @@ import { environment } from '../environments/environment';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 import { provideAuth, getAuth } from '@angular/fire/auth';
-
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { HeaderComponent } from './header/header.component';
@@ -27,6 +26,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { ProjectAddComponent } from './project-add/project-add.component';
 import { ProjectEditComponent } from './project-edit/project-edit.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +50,7 @@ import { ProjectEditComponent } from './project-edit/project-edit.component';
     RegisterFormComponent,
     ProjectAddComponent,
     ProjectEditComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,5 +64,6 @@ import { ProjectEditComponent } from './project-edit/project-edit.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {
- }
+}

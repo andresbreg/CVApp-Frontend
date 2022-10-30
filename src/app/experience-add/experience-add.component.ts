@@ -26,7 +26,7 @@ export class ExperienceAddComponent implements OnInit {
 
   constructor(private GetDataService:GetDataService,
               private sanitizer:DomSanitizer,
-              private storage:Storage) { }
+              private storage:Storage) {}
 
   ngOnInit(): void {
   }

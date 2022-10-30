@@ -31,11 +31,10 @@ address {
   margin-right: 16px;
 }
 
-abbr {
+/* abbr {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* display: none; */
 }
 
 abbr img {
@@ -53,7 +52,7 @@ abbr img:hover {
 
 .edit-button {
   background-color: orange;
-}
+} */
 
 /* Responsive Styles */
 

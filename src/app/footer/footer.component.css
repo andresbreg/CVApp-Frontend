@@ -1,0 +1,11 @@
+section {
+  background: linear-gradient(90deg, rgba(27,56,135,1), rgba(28,125,172,1) 100%);
+  color: white;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+p {
+  margin: 0;
+  padding: 8px;
+}

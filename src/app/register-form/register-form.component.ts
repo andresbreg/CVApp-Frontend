@@ -7,6 +7,7 @@ import { FormControl, FormGroup } from '@angular/forms';
   templateUrl: './register-form.component.html',
   styleUrls: ['./register-form.component.css']
 })
+
 export class RegisterFormComponent implements OnInit {
 
   registerForm: FormGroup;

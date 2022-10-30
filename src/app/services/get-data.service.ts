@@ -33,7 +33,8 @@ export class GetDataService {
     skillLevel: String
   };
 
-  apiUrl='http://localhost:8080/';
+  //apiUrl='http://localhost:8080/';
+  apiUrl='https://cvapp-backend.herokuapp.com/';
 
   constructor(private http:HttpClient) {}
 

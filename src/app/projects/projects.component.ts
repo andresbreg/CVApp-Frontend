@@ -8,6 +8,7 @@ import { Project } from '../model/model';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css']
 })
+
 export class ProjectsComponent implements OnInit {
 
   data:any = [];

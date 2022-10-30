@@ -16,7 +16,7 @@ export class AboutEditComponent implements OnInit {
     about:''
   }
 
-  constructor(private dataService:GetDataService) { }
+  constructor(private dataService:GetDataService) {}
 
   ngOnInit(): void {
   }
