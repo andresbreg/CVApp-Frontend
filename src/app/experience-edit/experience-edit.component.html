@@ -1,18 +1,18 @@
 <section class="edit-experience-container">
   <form>
-    <fieldset>
+    <fieldset class="name-field">
       <label for="name">Lugar</label>
       <input type="text" id="name" name="name" [(ngModel)]="experienceItem.name">
     </fieldset>
-    <fieldset>
+    <fieldset class="job-field">
       <label for="job">Curso</label>
       <input type="text" id="job" name="job" [(ngModel)]="experienceItem.job">
     </fieldset>
-    <fieldset>
+    <fieldset class="start-date-field">
       <label for="startDate">Desde</label>
       <input type="text" id="startDate" name="startDate" [(ngModel)]="experienceItem.startDate">
     </fieldset>
-    <fieldset>
+    <fieldset class="end-date-field">
       <label for="endDate">Hasta</label>
       <input type="text" id="endDate" name="endDate" [(ngModel)]="experienceItem.endDate">
     </fieldset>
@@ -23,8 +23,8 @@
     <fieldset class="image-field">
       <img [src]="experienceItem.logoUrl" alt="Logo de {{ experienceItem.name }}">
     </fieldset>
-    <fieldset>
-      <label for="logoUrl" class="urlLogo">Url del Logo</label>
+    <fieldset class="urlLogo">
+      <label for="logoUrl">Url del Logo</label>
       <input type="text" id="logoUrl" name="logoUrl"[(ngModel)]="experienceItem.logoUrl">
     </fieldset>
     <fieldset class="edit-item-field">

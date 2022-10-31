@@ -1,11 +1,11 @@
 <section class="add-skill-container">
   <form>
-    <fieldset>
+    <fieldset class="skill-name-fieldset">
       <label for="name" id="name">Habilidad</label>
       <input type="text" id="name" name="name" [(ngModel)]="newSkillItem.name">
     </fieldset>
     <fieldset class="skill-level-fieldset">
-      <label>Nivel</label>
+      <label class="skill-level-label">Nivel</label>
       <fieldset class="fieldgroup">
         <div class="level">
           <input type="radio" id="basic" name="level" value="Básico" [(ngModel)]="newSkillItem.skillLevel">
@@ -25,15 +25,15 @@
       <label for="url">Cargar Logo</label>
       <input type="file" id="url" name="url" (change)="catchFile($event);uploadImage($event)">
     </fieldset>
-    <fieldset class="image-field" *ngIf="filePreview">
-      <img [src]="filePreview" alt="">
-    </fieldset>
-    <fieldset *ngIf="filePreview">
-      <label for="logoUrl" class="urlLogo">Url del Logo</label>
-      <input type="text" id="logoUrl" name="logoUrl"[(ngModel)]="newSkillItem.logoUrl">
-    </fieldset>
     <fieldset class="add-item-field">
       <button class="add-button" (click)="saveElement()">Agregar Habilidad</button>
+    </fieldset>
+    <fieldset class="image-field" *ngIf="filePreview">
+      <img [src]="filePreview" alt="Logo de la Habilidad">
+    </fieldset>
+    <fieldset class="urlLogo" *ngIf="filePreview">
+      <label for="logoUrl" id="logoUrl">Url del Logo</label>
+      <input type="text" id="logoUrl" name="logoUrl"[(ngModel)]="newSkillItem.logoUrl">
     </fieldset>
   </form>
 </section>

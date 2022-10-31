@@ -1,45 +1,19 @@
 .add-skill-container {
-  padding: 12px 12px 0 12px;
+  padding: 12px 24px;
   background-color: antiquewhite;
 }
 
 form {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 320px repeat(3, 1fr);
   justify-content: center;
   text-align: center;
 }
 
 fieldset {
+  display: grid;
   padding: 12px;
   border: none;
-}
-
-.skill-level-fieldset {
-  grid-column-start: 2;
-  grid-column-end: 5;
-}
-
-.fieldgroup {
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
-}
-
-.level {
-  float: left;
-  display: flex;
-  width: 1auto;
-}
-
-input[type=radio] {
-  margin-bottom: 8px;
-  margin-right: 8px;
-}
-
-.radio-button-label {
-  float: left;
-  clear: none;
 }
 
 label {
@@ -54,42 +28,53 @@ input {
   justify-self: center;
 }
 
+.skill-level-fieldset {
+  grid-column: 2/5;
+}
+
+.skill-level-label {
+  justify-self: center;
+}
+
+.fieldgroup {
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.level {
+  display: flex;
+}
+
+input[type=radio] {
+  margin-right: 8px;
+}
+
 .radio-button-label {
   font-weight: 500;
+  margin-bottom: 0;
 }
 
 .add-image-field {
-  grid-column-start: 1;
-  grid-column-end: 2;
+  grid-column: 1/2;
 }
 
 input[type="file"] {
   background-color: white;
   cursor: pointer;
-}
-
-.image-field {
-  grid-column-start: 2;
-  grid-column-end: 3;
-}
-
-.urlLogo {
-  grid-column-start: 3;
-  grid-column-end: 4;
+  height: fit-content;
 }
 
 .add-item-field {
-  grid-column-start: 4;
-  grid-column-end: 5;
+  grid-column: 2/5;
   display: grid;
   justify-content: center;
-  align-items: center;
- }
+  align-items: flex-end;
+}
 
- .add-button {
+.add-button {
   width: 180px;
   height: 36px;
-  margin: auto 24px;
   background-color: rgb(119, 163, 30);
   border: none;
   border-radius: 25px;
@@ -102,4 +87,48 @@ input[type="file"] {
 
 .add-button:hover {
   background-color: olivedrab;
+}
+
+.image-field {
+  grid-column: 1/2;
+  justify-self: center;
+}
+
+img {
+  max-width: 96px;
+  max-height: 96px;
+}
+
+.urlLogo {
+  grid-column: 2/5;
+}
+
+#logoUrl {
+  max-width: 768px;
+  height: fit-content;
+  justify-self: center;
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 768px) {
+  .skill-name-fieldset {
+    grid-column: 1/5;
+  }
+  .skill-level-fieldset {
+    grid-column: 1/5;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .add-image-field {
+    grid-column: 1/5;
+  }
+  .add-item-field {
+    grid-column: 1/5;
+    margin: 12px 0;
+  }
+  form {
+    grid-template-columns: 160px repeat(3, 1fr);
+  }
 }

@@ -10,6 +10,7 @@ form {
 }
 
 fieldset {
+  display: grid;
   padding: 12px;
   border: none;
 }
@@ -26,24 +27,9 @@ input {
   justify-self: center;
 }
 
-.add-image-field {
-  grid-column-start: 1;
-  grid-column-end: 2;
-}
-
 input[type="file"] {
   background-color: white;
   cursor: pointer;
-}
-
-.image-field {
-  grid-column-start: 2;
-  grid-column-end: 3;
-}
-
-.urlLogo {
-  grid-column-start: 3;
-  grid-column-end: 4;
 }
 
 .add-item-field {
@@ -57,7 +43,6 @@ input[type="file"] {
  .add-button {
   width: 180px;
   height: 36px;
-  margin: auto 24px;
   background-color: rgb(119, 163, 30);
   border: none;
   border-radius: 25px;
@@ -70,4 +55,34 @@ input[type="file"] {
 
 .add-button:hover {
   background-color: olivedrab;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+  .name-field {
+    grid-column: 1/3;
+  }
+  .job-field, .add-image-field, .urlLogo {
+    grid-column: 3/5;
+  }
+  .image-field {
+    grid-column: 1/3;
+    justify-content: center;
+  }
+  .add-item-field {
+    grid-column: 1/5;
+  }
+}
+
+@media (max-width: 560px) {
+  .name-field, .job-field, .add-image-field, .image-field, .urlLogo {
+    grid-column: 1/5;
+  }
+  .start-date-field {
+    grid-column: 1/3;
+  }
+  .end-date-field {
+    grid-column: 3/5;
+  }
 }

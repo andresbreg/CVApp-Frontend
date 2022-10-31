@@ -7,8 +7,7 @@
   min-width: 320px;
   padding: 24px;
   box-sizing: border-box;
-  font-family: monospace;
-  font-size: large;
+  font-size: 18px;
 }
 
 .section-title, .section-content {
@@ -49,6 +48,12 @@ p {
 
 /* Responsive Styles */
 
+@media (max-width: 1024px) {
+  .introduction {
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 768px) {
   .about-container {
     flex-wrap: wrap;
@@ -60,8 +65,7 @@ p {
 }
 
 @media (max-width: 400px) {
-  h3 {
-    border-top: 4px solid #1976d2;
-    padding: 24px;
+  .introduction {
+    font-size: 15px;
   }
 }

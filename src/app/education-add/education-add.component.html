@@ -1,18 +1,18 @@
 <section class="add-education-container">
   <form>
-    <fieldset>
+    <fieldset class="name-field">
       <label for="name" id="name">Lugar</label>
       <input type="text" id="name" name="name" [(ngModel)]="newEducationItem.name">
     </fieldset>
-    <fieldset>
+    <fieldset class="course-field">
       <label for="course" id="course">Curso</label>
       <input type="text" id="course" name="course" [(ngModel)]="newEducationItem.course">
     </fieldset>
-    <fieldset>
+    <fieldset class="start-date-field">
       <label for="startDate" id="startDate">Desde</label>
       <input type="text" id="startDate" name="startDate" [(ngModel)]="newEducationItem.startDate">
     </fieldset>
-    <fieldset>
+    <fieldset class="end-date-field">
       <label for="endDate" id="endDate">Hasta</label>
       <input type="text" id="endDate" name="endDate" [(ngModel)]="newEducationItem.endDate">
     </fieldset>
@@ -21,10 +21,10 @@
       <input type="file" id="url" name="url" (change)="catchFile($event);uploadImage($event)">
     </fieldset>
     <fieldset class="image-field" *ngIf="filePreview">
-      <img [src]="filePreview" alt="">
+      <img [src]="filePreview" alt="Logo de la Formación">
     </fieldset>
-    <fieldset *ngIf="filePreview">
-      <label for="logoUrl" class="urlLogo">Url del Logo</label>
+    <fieldset class="urlLogo" *ngIf="filePreview">
+      <label for="logoUrl">Url del Logo</label>
       <input type="text" id="logoUrl" name="logoUrl"[(ngModel)]="newEducationItem.logoUrl">
     </fieldset>
     <fieldset class="add-item-field">

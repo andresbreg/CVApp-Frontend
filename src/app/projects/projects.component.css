@@ -160,9 +160,6 @@ a {
 }
 
 @media (max-width: 400px) {
-  thead tr {
-    height: 72px;
-  }
   .spacer {
     width: 48px;
   }
